@@ -1,0 +1,48 @@
+'''
+Instructions:
+
+• Ask the user to enter a username and a password.
+• Use string methods to:
+
+- Convert the username to lowercase.
+- Replace any spaces in the username with underscores (_).
+- Find the length of the password.
+- Print all results clearly on the terminal.
+
+
+• Use Boolean expressions to check:
+
+- If the password length is greater than or equal to 8.
+- If the username is "admin".
+- If the password is "1234".
+- Check if it's default account → (username is "admin" and the password is "1234" ).
+- Print all results in a clear way as True/False only.
+
+
+•  Use an f-string to display a final welcome message with the fixed username and the password length.
+'''
+username = input("Enter your name ")
+password = input("Enter your password ")
+
+print(" username in lowercase : ",username.lower())
+print(" username with underscores : ",username.replace(" ","_"))
+print(" The length of the password : ",len(password))
+
+password_length_8=False
+if(len(password) >=8) :
+  password_length_8=True
+print(password_length_8)
+
+username_admin=False
+if(username=="admin") :
+  username_admin=True
+print(username_admin)
+
+password_1234=False
+if(password== "1234") :
+  password_1234=True
+print(password_1234)
+
+print(password_1234 and username_admin)
+
+print(f" welcome {username} , your password length is : {len(password)}")
