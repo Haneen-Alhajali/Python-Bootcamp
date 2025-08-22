@@ -1,0 +1,13 @@
+'''
+
+Create a Python program that allows a user to enter their name and some notes, then saves the notes to a file and displays them.
+This task will help you practice input/output operations, variables, and file handling.
+'''
+name = input ("Enter Your Name : ")
+notes = input("Enter any Notes : ")
+with open("data.txt",'w') as f:
+f.write("The Name: "+ name +"\n")
+f.write("Notes: " + notes +"\n")
+
+with open ("data.txt",'r') as f:
+print(f.read())
